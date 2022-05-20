@@ -29,7 +29,6 @@
  * 
  *************************************************************/
 
-
 // include the library code:
 #include <EEPROM.h>
 #include <Wire.h>
@@ -47,7 +46,6 @@
 #define VIOLET 0x5
 #define WHITE 0x7
 
-
 // ********************* EEPROM Stuff ******************
 
 #define calSlopeAddress     0
@@ -63,10 +61,6 @@
 //******************** variables **********************
 
 Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
-
-
-
-
 
 #define RUNSTATE 0
 #define CALSTATE 1
@@ -143,9 +137,10 @@ void setup() {
   // pat ourselves on the back
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print(" OpenWater ");
+  lcd.print("   OpenWater");
+  lcd.setCursor(0,1);
+  lcd.print("     v");
   lcd.print(versionNum);
-
 
 
   // set timer overflow interrupt for Bluetooth coms so it doesn't block when collecting data
@@ -162,8 +157,6 @@ void setup() {
   TCCR1B |= (1 << CS12) | (1 << CS10);  
   // enable timer compare interrupt
   TIMSK1 |= (1 << OCIE1A);
-
-
 
 
  // state = RUNSTATE;
