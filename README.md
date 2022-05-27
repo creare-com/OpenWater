@@ -15,4 +15,4 @@ The goal of this project is to provide the bill of materials, design files, elec
 For instructions on how to assemble the meter, see the [Documentation](https://github.com/creare-com/OpenWater/blob/master/Documentation)
 
 ## License
-All of these materials are released under the MIT License.  Use at your own risk.
+The Firmware is released under the BSD 3-Clause License.  The Hardware is released under the CERN Open Hardware License v2 - Permissive.  Use at your own risk.
